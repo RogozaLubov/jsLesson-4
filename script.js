@@ -1,19 +1,36 @@
-//task1//
+// task1//
+
+//Исправленo//
 let arrOne =[1,2,3,4,5];
-let reduceValue = arrOne.reduce(function( previousValue, item, index, array ){
-    return item + previousValue ;
-}, 0);
-console.log (reduceValue);
+function arrSumOne(array){
+    let sum =0;
+    for (let i=0; i<array.lenght;i++){
+        sum+= array[i];
+    }
+    return sum
+}
+console.log (arrSumOne(arrOne))
+
 
 //task2//
 
-let arrTwo = ['Ann', 'Baddy', 'Sem',];
-console.log (arrTwo.indexOf('Baddy'));
-console.log (arrTwo.indexOf('Lyubov'));
-console.log (arrTwo.indexOf('Ann',2));
 
-//task3//
-let arrThree = [1,2,3];
-let arrFour = [4,5,6];
-let arrFive = arrThree.concat(arrFour);
-console.log (arrFive);
+function value(inArr, inFunction){
+    let outArr =[];
+    for (let i=0, n=-1; i<inArr.lenght;i++){
+    if (inArr[i]==inFunction[0] ){
+        n++;
+        outArr [n] =i;
+    }
+    }
+    if (outArr.length==0)return -1;
+    else return (outArr);
+}
+
+// //task3//
+function arr (array1, array2){
+    let array3 =[];
+    for(var i = 0; i < array1.length; ++i) array3 [i]= array1[i];
+    for(var i = 0; i< array2.length; ++i) array3 [array1.length+i]= array2[i];
+    return array3;
+}
